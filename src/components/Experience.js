@@ -64,14 +64,18 @@ const Experience = () => {
 
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center px-12 sm:px-0'>
             
-                {experiences.map((experience)=>(
-                    <div  key = {experience.id} className={'shadow-md hover:scale-105 duration-500 py-2 rounded-lg'+' '+experience.style} width={100} height={100}>
+                {experiences.map((experience)=>{
+                    const experience_style =  `shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${experience.style}`;
+
+                    return (
+                    
+                    <div  key = {experience.id} className={experience_style} width={100} height={100}>
                        <img src={experience.src} alt="" className='w-20 mx-auto' />
                        <p className='mt-4'>
                             {experience.a}
                        </p>
                     </div>
-                ))}
+                )})}
             
             
         </div>
