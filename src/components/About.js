@@ -21,7 +21,7 @@ const About = () => {
             <br />
 
             <p className='text-xl mt-5'>
-            I enjoy the continuous learning and problem-solving aspects of building applications and solutions, as they keep me engaged and motivated.
+            I enjoy the continuous learning and problem-solving aspects of building applications and solutions, as they keep me engaged and motivate.
             </p>
         </div>
     </div>
