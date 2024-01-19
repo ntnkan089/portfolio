@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa'
 
+import {Link} from 'react-scroll'
+
 const NavBar = () => {
     const [nav, setNav] = useState(false);
     const links = [
@@ -13,7 +15,7 @@ const NavBar = () => {
     ]
   return (
     /*fix navbar, when scroll fixed to screen.*/ 
-    <div className="flex justify-between items-center w-full h-20 text-white bg-black fixed px-4">
+    <div className="flex justify-between items-center w-full h-20 text-white bg-black fixed px-4 z-10">
         <div>
          <h1 className="text-5xl font-signature ml-2">Nhan</h1>
         </div>
@@ -22,7 +24,7 @@ const NavBar = () => {
             {
                 links.map((link) => (
                     <li key = {link.id} className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200">
-                        {link.link}
+                        <Link to={link.link} smooth duration={500}>{link.link}</Link>
                     </li>))
             }
         </ul>
@@ -44,7 +46,7 @@ const NavBar = () => {
             {
                 links.map((link) => (
                     <li key = {link.id} className="px-3 cursor-pointer capitalize py-5 text-4xl">
-                        {link.link}
+                        <Link to={link.link} onClick={() => setNav(!nav)} smooth duration={500}>{link.link}</Link>
                     </li>))
             }
         </ul>

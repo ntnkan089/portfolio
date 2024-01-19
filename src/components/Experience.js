@@ -1,24 +1,46 @@
 import React from 'react'
 import experie from '../assets/React-icon.svg.png'
+import java from '../assets/java.bmp'
+
+import HTML from '../assets/HTML.png'
+import JavaScript from '../assets/js.bmp'
+
+import CSS from '../assets/cs.bmp'
+import TailWind_CSS from '../assets/tailwind.png'
+import Node from '../assets/node.png'
+import Express from '../assets/express.png'
+
+
 const Experience = () => {
 
     const experiences = [
         
         {
-            id:1, src:experie, a: "HTML", style: 'shadow-orange-500'
+            id:1, src: HTML, a: "HTML", style: 'shadow-orange-500'
         },
         {
-            id:1, src:experie, a: "React.js", style: 'shadow-orange-500'
+            id:2, src: experie, a: "React.js", style: 'shadow-orange-500'
         },
         {
-            id:1, src:experie, a: "Tailwind CSS", style: 'shadow-orange-500'
+            id:3, src:CSS, a: "CSS", style: 'shadow-orange-500'
+        },
+        
+        {
+            id:4, src:TailWind_CSS, a: "Tailwind CSS", style: 'shadow-orange-500'
         },
         {
-            id:1, src:experie, a: "Node.js", style: 'shadow-orange-500'
+            id:5, src:JavaScript, a: "JavaScript", style: 'shadow-orange-500'
         },
         {
-            id:1, src:experie, a: "Express.js", style: 'shadow-orange-500'
+            id:6, src:Node, a: "Node.js", style: 'shadow-orange-500'
+        },
+        {
+            id:7, src:Express, a: "Express.js", style: 'shadow-orange-500'
+        },
+        {
+            id:8, src:java, a: "Java", style: 'shadow-orange-500'
         }
+        
     ]
   return (
     <div name = "experience" className='w-full h-auto bg-gradient-to-b from-gray-800 to-black text-white py-20

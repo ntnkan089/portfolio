@@ -1,25 +1,22 @@
 import React from 'react'
 import a0 from '../assets/portfolio/Screenshot 2024-01-18 105635.jpg'
+import blog from '../assets/portfolio/blog.png'
 
+import list from '../assets/list.png'
 
 const Portfolio = () => {
     const portfolios = [
         
     {
-        id:1, src:a0,
+        id:1, src:a0, demo: 'https://legendary-hotteok-612fb2.netlify.app/', github: 'https://github.com/ntnkan089/expense'
     },
     {
-        id:1, src:a0,
+        id:2, src:blog, demo: 'https://cerulean-buttercream-616495.netlify.app/', github: 'https://github.com/ntnkan089/react-blog'
     },
     {
-        id:1, src:a0,
+        id:3, src:list, demo: 'https://superlative-buttercream-e30591.netlify.app/', github: 'https://github.com/ntnkan089/react-list'
     },
-    {
-        id:1, src:a0,
-    },
-    {
-        id:1, src:a0,
-    }
+    
 ]
   return (
     <div name = "portfolio" className='w-full h-auto bg-gradient-to-b from-black to-gray-800 text-white
@@ -45,14 +42,14 @@ const Portfolio = () => {
             
                 {portfolios.map((portfolio)=>(
                     <div className='shadow-md shadow-gray-600 rounded-lg' width={100} height={100}>
-                        <img src={a0} alt="" className='rounded-md hover:scale-105 duration-200'/> 
+                        <img src={portfolio.src} alt="" className='rounded-md hover:scale-105 duration-200'/> 
                         <div className='flex items-center justify-cen ter'>
 
                             <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-10 border-r-2'>
-                                demo
+                               <a href={portfolio.demo} target='_blank'> demo </a>
                             </button>
                             <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
-                                github
+                               <a href={portfolio.github} target='_blank'> github</a>
                             </button>
                         </div>
                     </div>

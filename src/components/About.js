@@ -14,14 +14,14 @@ const About = () => {
                 </p>
             </div>
             <p className='text-xl mt-20'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo maiores laboriosam a fuga sed, placeat, beatae voluptatem totam tenetur, cum soluta laborum ea. Tempore magnam placeat distinctio nisi qui iusto, quos nulla quidem eveniet enim vero nihil perferendis beatae eius dolorem, dignissimos ducimus quasi dolore minima dolores, ad odit cum?
+            I discovered my passion for programming during my early college years when I was exposed to the limitless possibilities of creating and solving problems through code. The ability to translate ideas into functional software fascinates me.
                 
             </p>
 
             <br />
 
             <p className='text-xl mt-5'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem molestias neque aspernatur magnam ipsa totam explicabo enim non beatae vel aut veniam eum adipisci dolore laudantium exercitationem fugit, saepe temporibus provident, perspiciatis eos! Iusto, commodi, ea reiciendis rerum nam vero deleniti corrupti, officia ullam aperiam aliquam minus dolores optio! Quae.
+            I enjoy the continuous learning and problem-solving aspects of building applications and solutions, as they keep me engaged and motivated.
             </p>
         </div>
     </div>
