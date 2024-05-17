@@ -1,9 +1,11 @@
 import React from 'react';
-import { FaGraduationCap } from 'react-icons/fa';
+
+
 
 const Education = () => {
   return (
-    <div name="education" className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white">
+
+<div name="education" className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         
         {/* Section Title */}
