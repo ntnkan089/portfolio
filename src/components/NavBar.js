@@ -10,8 +10,11 @@ const NavBar = () => {
         {id:1, link: 'home'},
         {id:2, link: 'about'},
         {id:3, link: 'portfolio'},
-        {id:4, link: 'experience'},
-        {id:5, link: 'contact'},
+        {id:9, link: 'education'},
+        {id:5, link: 'experience'},
+        {id:6, link: 'extracurricular'},
+
+        {id:8, link: 'contact'},
     ]
   return (
     /*fix navbar, when scroll fixed to screen.*/ 

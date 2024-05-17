@@ -17,7 +17,7 @@ const SocialLink = () => {
                 Github
                 <FaGithub size={30}/>
             </>
-        ), href: "https://www.linkedin.com/in/nhan-nguyen-61602a281/",},
+        ), href: "https://github.com/ntnkan089",},
 
         {id:3, child:(
             <>
@@ -37,7 +37,7 @@ const SocialLink = () => {
   return (
 
     /* When position is set to absolute or fixed, the left property specifies the distance between the element's outer margin of left edge and the inner border of left edge of its containing block. (The containing block is the ancestor to which the element is relatively positioned.) */
-    <div className=" hidden lg:flex flex-col top-[35%] left-0 fixed">
+    <div className=" hidden lg:flex lg:flex-col top-[35%] left-0 fixed">
         <ul>
             {links.map((link) => (
 
