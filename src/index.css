@@ -25,7 +25,7 @@
  /* Add these styles to your CSS file */
 
 .parallax-bg {
-  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085'); /* Replace with your image URL */
+  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
