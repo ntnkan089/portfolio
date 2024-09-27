@@ -1,66 +1,142 @@
-import React from 'react'
-import a0 from '../assets/portfolio/Screenshot 2024-01-18 105635.jpg'
-import blog from '../assets/portfolio/blog.png'
+import React, { useState } from 'react';
+import petlinkImg from '../assets/portfolio/petlink.png';
+import photoboothImg from '../assets/portfolio/photobooth.png';
 
-import list from '../assets/list.png'
+import a0 from '../assets/portfolio/Screenshot 2024-01-18 105635.jpg';
+import blog from '../assets/portfolio/blog.png';
 
+import list from '../assets/list.png';
 const Portfolio = () => {
-    const portfolios = [
-        
+  const [showMore, setShowMore] = useState(false);
+
+  const portfolios = [
     {
-        id:1, src:a0, demo: 'https://legendary-hotteok-612fb2.netlify.app/', github: 'https://github.com/ntnkan089/expense'
+
+      id: 1,
+      src: petlinkImg,
+      demo: 'https://petlink-six.vercel.app/',
+      github: 'https://github.com/ntnkan089/petlink',
+      title: 'PetLink',
+      description: 'A pet adoption platform using Next.js, Prisma, and NextAuth.'
     },
     {
-        id:2, src:blog, demo: 'https://cerulean-buttercream-616495.netlify.app/', github: 'https://github.com/ntnkan089/react-blog'
+      id: 2,
+      src: photoboothImg,
+      demo: 'https://photobooth-ftl1.onrender.com/',
+      github: 'https://github.com/ntnkan089/photobooth',
+      title: 'PhotoBooth',
+      description: 'A social media app for sharing posts and chatting, built with React, Node.js, Express.js, and PostgreSQL.'
+    }
+  ];
+
+  const hiddenPortfolios = [
+    {
+      id: 3,
+      src: a0,
+      demo: 'https://legendary-hotteok-612fb2.netlify.app/',
+      github: 'https://github.com/ntnkan089/expense',
+      title: 'Expense Tracker',
+      description: 'A web app for tracking expenses and managing personal finances.',
     },
     {
-        id:3, src:list, demo: 'https://superlative-buttercream-e30591.netlify.app/', github: 'https://github.com/ntnkan089/react-list'
+      id: 4,
+      src: blog,
+      demo: 'https://cerulean-buttercream-616495.netlify.app/',
+      github: 'https://github.com/ntnkan089/react-blog',
+      title: 'React Blog',
+      description: 'A blog platform built with React, allowing users to write and publish posts.',
     },
-    
-]
+    {
+      id: 5,
+      src: list,
+      demo: 'https://superlative-buttercream-e30591.netlify.app/',
+      github: 'https://github.com/ntnkan089/react-list',
+      title: 'React To-Do List',
+      description: 'A task management app built with React for creating and organizing to-do lists.',
+    },
+  ];
+
   return (
-    <div name = "portfolio" className='w-full h-auto bg-gradient-to-b from-black to-gray-800 text-white
-    md:h-auto'>
-    
-    <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-        
-        {/* pb-8 and mb-8 same? paddin, margin botto. */}
-        {/* make this div so the underline/ bottom border paddin same size as tex. */}
-        <div className='mb-8'>
-            {/* border-b-3 is border bottom 3px v. */}
-            <p className='text-4xl font-bold inline border-b-4 border-gray-500'>
-                Portfolio
-            </p>
-            <p className='py-5'>
-            Check out some of my work:
-            
-        </p>
-        </div>
-        
-
-        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-            
-                {portfolios.map((portfolio)=>(
-                    <div className='shadow-md shadow-gray-600 rounded-lg' width={100} height={100}>
-                        <img src={portfolio.src} alt="" className='rounded-md hover:scale-105 duration-200'/> 
-                        <div className='flex items-center justify-cen ter'>
-
-                            <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-10 border-r-2'>
-                               <a href={portfolio.demo} target='_blank' rel="noreferrer"> demo </a>
-                            </button>
-                            <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>
-                               <a href={portfolio.github} target='_blank' rel="noreferrer"> github</a>
-                            </button>
-                        </div>
-                    </div>
-                ))}
-            
-            
+    <div name="portfolio" className="w-full h-auto bg-gradient-to-b from-black to-gray-800 text-white">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+        <div className="mb-8">
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500">Portfolio</p>
+          <p className="py-5">Check out some of my work:</p>
         </div>
 
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+          {portfolios.map((portfolio) => (
+            <div key={portfolio.id} className="shadow-md shadow-gray-600 rounded-lg">
+              <div className="w-full h-80">
+                <img
+                  src={portfolio.src}
+                  alt={portfolio.title}
+                  className="rounded-md hover:scale-105 duration-200 object-cover w-full h-full"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-xl font-semibold">{portfolio.title}</h3>
+                <p className="text-gray-400">{portfolio.description}</p>
+              </div>
+              <div className="flex items-center justify-center">
+                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                  <a href={portfolio.demo} target="_blank" rel="noreferrer">Demo</a>
+                </button>
+                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                  <a href={portfolio.github} target="_blank" rel="noreferrer">GitHub</a>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Show More Section for older projects */}
+        {showMore && (
+          <div className="mt-16"> {/* Add top margin to separate sections */}
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-center">Older Projects</h3>
+              <p className="text-center text-gray-400">These are some of my earlier works.</p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+              {hiddenPortfolios.map((portfolio) => (
+                <div key={portfolio.id} className="shadow-md shadow-gray-600 rounded-lg">
+                  <div className="w-full h-80">
+                    <img
+                      src={portfolio.src}
+                      alt={portfolio.title}
+                      className="rounded-md hover:scale-105 duration-200 object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-xl font-semibold">{portfolio.title}</h3>
+                    <p className="text-gray-400">{portfolio.description}</p>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                      <a href={portfolio.demo} target="_blank" rel="noreferrer">Demo</a>
+                    </button>
+                    <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                      <a href={portfolio.github} target="_blank" rel="noreferrer">GitHub</a>
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+
+)}
+
+        <div className="flex justify-center mt-8">
+          <button onClick={() => setShowMore(!showMore)} className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-700 duration-200">
+            {showMore ? 'Show Less' : 'Show More'}
+          </button>
+        </div>
+      </div>
     </div>
-</div>
-  )
-}
+  );
 
-export default Portfolio
+};
+
+export default Portfolio;

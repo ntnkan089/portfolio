@@ -31,15 +31,22 @@ const Education = () => {
               <li>Computer Networks</li>
               <li>Artificial Intelligence</li>
               <li>Web Development</li>
+              
+              <li>Compilers Design</li>
             </ul>
+          
           </div>
         </div>
 
-        {/* Additional Degrees, Minors, or Relevant Information */}
        
       </div>
     </div>
-  );
+
+);
 }
 
 export default Education;
+
+
+
+
