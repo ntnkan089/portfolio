@@ -11,11 +11,11 @@ const About = () => {
             </p>
           </div>
           <p className='text-xl mt-20'>
-            I discovered my passion for programming during my early college years when I was exposed to the limitless possibilities of creating and solving problems through code. The ability to translate ideas into functional software fascinates me.
+            I discovered my passion for programming during my early college years when I was exposed to the endless possibilities of creating and solving problems through code. The ability to translate ideas into functional software has always fascinated me.
           </p>
           <br />
           <p className='text-xl mt-5'>
-            I enjoy the continuous learning and problem-solving aspects of building applications and solutions, as they keep me engaged and motivate.
+            I enjoy the continuous learning and problem-solving aspects of building applications and solutions. They keep me engaged and motivated throughout my programming journey.
           </p>
         </div>
       </div>
