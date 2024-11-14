@@ -34,7 +34,7 @@ const SocialLink = () => {
       href: "mailto:ntnkan098@gmail.com",
     },
     {
-      id: 4,
+      id: 8,
       child: (
         <>
           Resume <BsFillPersonLinesFill size={25} />

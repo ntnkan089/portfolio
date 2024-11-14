@@ -28,7 +28,7 @@ const SocialLink = () => {
 
         {id:5, child:(
             <>
-                resume
+                Resume
                 <BsFillPersonLinesFill size={30}/>
             </>
         ), href: "/Nhan-Nguyen_Resume.pdf",style: 'rounded-br-md',
@@ -59,4 +59,9 @@ const SocialLink = () => {
   )
 }
 
+
 export default SocialLink
+
+
+
+

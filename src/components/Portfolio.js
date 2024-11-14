@@ -5,7 +5,10 @@ import photoboothImg from '../assets/portfolio/photobooth.png';
 import a0 from '../assets/portfolio/Screenshot 2024-01-18 105635.jpg';
 import blog from '../assets/portfolio/blog.png';
 
+import enta from '../assets/portfolio/enta.png';
+
 import list from '../assets/list.png';
+import ches from '../assets/portfolio/ches.png';
 const Portfolio = () => {
   const [showMore, setShowMore] = useState(false);
 
@@ -26,6 +29,14 @@ const Portfolio = () => {
       github: 'https://github.com/ntnkan089/photobooth',
       title: 'PhotoBooth',
       description: 'A social media app for sharing posts and chatting, built with React, Node.js, Express.js, and PostgreSQL.'
+    },
+    {
+      id: 3,
+      src: enta,
+      demo: 'https://mental-health-s.vercel.app/',
+      github: 'https://github.com/ntnkan089/mental-health-s',
+      title: 'Mental Health Support',
+      description: 'A comprehensive mental health support platform designed to promote well-being and provide valuable resources for users. Built with Tailwind CSS, React, ShadCN, and Spring Boot.'
     }
   ];
 
@@ -39,7 +50,7 @@ const Portfolio = () => {
       description: 'A web app for tracking expenses and managing personal finances.',
     },
     {
-      id: 4,
+      id: 8,
       src: blog,
       demo: 'https://cerulean-buttercream-616495.netlify.app/',
       github: 'https://github.com/ntnkan089/react-blog',
@@ -54,6 +65,14 @@ const Portfolio = () => {
       title: 'React To-Do List',
       description: 'A task management app built with React for creating and organizing to-do lists.',
     },
+    {
+      id: 18,
+      src: ches,
+      demo: 'https://github.com/cs100/final-project-cs100-dream-team',
+      github: 'https://github.com/cs100/final-project-cs100-dream-team',
+      title: 'Chess App',
+      description: 'A Chess App for class project, built using C++ and raylib.',
+    },
   ];
 
   return (
@@ -66,7 +85,7 @@ const Portfolio = () => {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
           {portfolios.map((portfolio) => (
-            <div key={portfolio.id} className="shadow-md shadow-gray-600 rounded-lg">
+            <div key={portfolio.id} className="shadow-md shadow-gray-600 rounded-lg flex flex-col justify-between">
               <div className="w-full h-80">
                 <img
                   src={portfolio.src}
@@ -100,7 +119,7 @@ const Portfolio = () => {
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
               {hiddenPortfolios.map((portfolio) => (
-                <div key={portfolio.id} className="shadow-md shadow-gray-600 rounded-lg">
+                <div key={portfolio.id} className="shadow-md shadow-gray-600 rounded-lg flex flex-col justify-between">
                   <div className="w-full h-80">
                     <img
                       src={portfolio.src}
@@ -140,3 +159,9 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
+
+
+
+
+

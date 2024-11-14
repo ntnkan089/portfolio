@@ -1,5 +1,7 @@
 import React from 'react'
-import { FaHtml5, FaReact, FaCss3Alt, FaNodeJs, FaJava, FaPython } from 'react-icons/fa'
+import { FaHtml5, FaReact, FaCss3Alt, FaNodeJs, FaJava, FaPython, F } from 'react-icons/fa'
+import { SiSpringboot, SiTypescript  } from "react-icons/si";
+
 import { SiTailwindcss, SiJavascript, SiMongodb, SiPostgresql, SiNextdotjs, SiExpress } from 'react-icons/si'
 
 const Experience = () => {
@@ -44,7 +46,13 @@ const Experience = () => {
         
         {
             id: 12, icon: <FaPython size={40} />, a: "Python", style: 'shadow-yellow-500'
-        }
+        },
+        {
+            id: 31, icon: <SiSpringboot size={40} />, a: "Spring Boot", style: 'shadow-green-300'
+        },
+        {
+            id: 81, icon: <SiTypescript size={40} />, a: "TypeScript", style: 'shadow-blue-500'
+        },
     ]
   
     return (
