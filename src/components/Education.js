@@ -20,6 +20,8 @@ const Education = () => {
           <h3 className="text-2xl font-semibold mb-1">Bachelor of Science in Computer Science</h3>
           <p className="italic text-lg text-gray-300">University of California, Riverside</p>
           <p className="text-lg text-gray-300">September 2021 - Present</p>
+          <br />
+          <p className="text-lg text-gray-300"><strong className='underline'>GPA:</strong> 3.94</p>
           
           <div className="mt-5">
             <h4 className="text-xl font-semibold mb-2">Relevant Coursework:</h4>
@@ -46,6 +48,10 @@ const Education = () => {
 }
 
 export default Education;
+
+
+
+
 
 
 
